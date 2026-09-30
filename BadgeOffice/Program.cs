@@ -35,6 +35,32 @@ int lockerNumber = rng.Next(0, 600);
 Console.WriteLine("Student ID: " + studentId);
 Console.WriteLine("Locker: " + lockerNumber);
 
+// this code calculates the walk time
+
+Console.Write("Input dorm 'x' value: ");
+int dormX1 = Convert.ToInt32(Console.ReadLine());
+Console.Write("Input dorm 'Y' value: ");
+int dormY1 = Convert.ToInt32(Console.ReadLine());
+
+Console.Write("Input class 'X' value: ");
+int classX2 = Convert.ToInt32(Console.ReadLine());
+Console.Write("Input class 'Y' value: ");
+int classY2 = Convert.ToInt32(Console.ReadLine());
+
+Console.Write("Input walking speed in feet per second: ");
+double walkingSpeed = Convert.ToDouble(Console.ReadLine());
+
+double distance = Math.Round(Math.Sqrt(Math.Pow((classX2 - dormX1),2) + Math.Pow((classY2 - dormY1),2)), 1);
+
+double tripInSeconds = Math.Round((distance / walkingSpeed), 0);
+
+int tripInMinutes = Convert.ToInt32(Math.Round((tripInSeconds / 60), 0));
+int tripSeconds = Convert.ToInt32(Math.Round((tripInSeconds % 60), 0));
+
+Console.WriteLine("Distance: " + distance);
+Console.WriteLine("Walk Time: " + tripInMinutes + " minutes and " + tripSeconds + " seconds" );
+
+
 
 
 
