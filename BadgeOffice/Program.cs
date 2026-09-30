@@ -1,26 +1,42 @@
 ﻿using System.ComponentModel;
 
-Console.Write("Please enter first and last name for badge: ");
-string fullName = Console.ReadLine();
+// this code parses name for badge
 
-fullName = fullName.Trim();
+// Console.Write("Please enter first and last name for badge: ");
+// string fullName = Console.ReadLine();
 
-int spacePosition = fullName.IndexOf(" ");
-string firstName = fullName.Substring(0, spacePosition);
-string lastName = fullName.Substring(spacePosition);
+// fullName = fullName.Trim();
 
-string firstInitial = firstName.Substring(0, 1);
-string lastInitial = lastName.Substring(spacePosition, 1);
-string userName = firstInitial + lastName.Trim();
+// int spacePosition = fullName.IndexOf(" ");
+// string firstName = fullName.Substring(0, spacePosition);
+// string lastName = fullName.Substring(spacePosition);
 
-string initials = firstInitial + "." + lastInitial + ".";
+// string firstInitial = firstName.Substring(0, 1);
+// string lastInitial = lastName.Substring(spacePosition, 1);
+// string userName = firstInitial + lastName.Trim();
 
-int lettersInLastName = lastName.Trim().Length;
+// string initials = firstInitial + "." + lastInitial + ".";
 
-Console.WriteLine("Name on badge: " + fullName.ToUpper());
-Console.WriteLine("Username: " + userName.ToLower());
-Console.WriteLine("Initials: " + initials.ToUpper());
-Console.WriteLine("Letters in last name: " + lettersInLastName);
+// int lettersInLastName = lastName.Trim().Length;
+
+// Console.WriteLine("Name on badge: " + fullName.ToUpper());
+// Console.WriteLine("Username: " + userName.ToLower());
+// Console.WriteLine("Initials: " + initials.ToUpper());
+// Console.WriteLine("Letters in last name: " + lettersInLastName);
+
+
+// this code assigns ID and locker number
+
+Random rng = new Random();
+
+int studentId = rng.Next(100000, 1000000);
+int lockerNumber = rng.Next(0, 600);
+
+Console.WriteLine("Student ID: " + studentId);
+Console.WriteLine("Locker: " + lockerNumber);
+
+
+
 
 
 
